@@ -17,14 +17,15 @@ function* getAllUserInfo(action) {
 			endpoint: '',
 			method: 'GET',
 		});
-		console.log(posts);
+		// console.log(posts);
 		
 		yield put({
 			type: GET_ALL_USER_INFO_REQUEST_SUCCESS,
 			payload: {
-				id: posts[0].id,
-				name: posts[0].title,
-				email: 'anshulborawake@gmail.com'
+				// id: posts[0].id,
+				// name: posts[0].title,
+				// email: 'anshulborawake@gmail.com'
+				posts
 			}
 		});
 	} catch(err) {

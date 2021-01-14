@@ -7,16 +7,20 @@ const initialState = {
 	accessToken: null
 };
 
-const reducer = (state = initialState, action) => {
+const init = []
+
+const reducer = (state = init, action) => {
 	switch(action.type) {
 		case GET_ALL_USER_INFO_REQUEST_SUCCESS: {
-			const { id, name, email } = action.payload;
+			// const { id, name, email } = action.payload;
+			// return {
+			// 	id,
+			// 	name,
+			// 	email,
+			// }
 
-			return {
-				id,
-				name,
-				email,
-			}
+			const allPosts = action.payload.posts;
+			return allPosts
 		}
 		default:
 			return state
